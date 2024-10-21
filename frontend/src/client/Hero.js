@@ -11,7 +11,7 @@ function Hero() {
               src="https://cdn-icons-png.flaticon.com/128/45/45200.png"
             /> 
             <div className="font-medium text-center text-lg sm:text-xl">
-              Saifii's  sadasd
+              Saifii's
             </div>
           </div>
         </div>
