@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const itemSchema = mongoose.Schema.object({
   category: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Cart",
+    ref: "Category",
     required: true,
   },
   name: {
@@ -12,12 +12,16 @@ const itemSchema = mongoose.Schema.object({
   },
   variants: [
     {
-      description: {
-        type: String,
-        required: true,
-      },
       price: {
         type: Number,
+        required: true,
+      },
+      quantity: {
+        type: Number,
+        required: true,
+      },
+      description: {
+        type: String,
         required: true,
       },
     },
