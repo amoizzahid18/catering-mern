@@ -12,16 +12,16 @@ const itemSchema = mongoose.Schema.object({
   },
   variants: [
     {
+      name: {
+        type: String, // e.g., "5kg Rice Bag Channa 20 to 25 Servings"
+        required: true,
+      },
+      servings: {
+        type: String, // Optional but helpful for understanding size/weight
+        required: true,
+      },
       price: {
         type: Number,
-        required: true,
-      },
-      quantity: {
-        type: Number,
-        required: true,
-      },
-      description: {
-        type: String,
         required: true,
       },
     },
@@ -34,7 +34,7 @@ const itemSchema = mongoose.Schema.object({
       },
       variants: [
         {
-          number: {
+          servings: {
             type: Number,
             required: true,
           },

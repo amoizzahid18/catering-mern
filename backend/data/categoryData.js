@@ -1,12 +1,13 @@
 const categoryData = [
-    { "name": "Qorma / Curry" },
-    { "name": "Pulao / Biryani" },
-    { "name": "Chinese Cuisine" },
-    { "name": "Vegetables" },
-    { "name": "Bbq" },
-    { "name": "Halwa Puri Combo" },
-    { "name": "Beverages" },
-    { "name": "Tandoor" },
-    { "name": "Dessert" },
-    { "name": "Add Ons" }
-  ]
+  { "name": "Qorma / Curry" },
+  { "name": "Pulao / Biryani" },
+  { "name": "Chinese Cuisine" },
+  { "name": "Vegetables" },
+  { "name": "Bbq" },
+  { "name": "Halwa Puri Combo" },
+  { "name": "Beverages" },
+  { "name": "Tandoor" },
+  { "name": "Dessert" },
+  { "name": "Add Ons" },
+];
+module.exports = categoryData;
