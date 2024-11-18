@@ -10,6 +10,10 @@ const itemSchema = mongoose.Schema.object({
     type: String,
     required: true,
   },
+  image: {
+    type: String,
+    required: true
+  },
   variants: [
     {
       name: {
