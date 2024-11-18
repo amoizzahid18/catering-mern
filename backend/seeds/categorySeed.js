@@ -10,6 +10,8 @@ connectDB();
 
 const importData = async () => {
     try {
+        await Category.deleteMany()
+        .then(() => {console.log("Category data deleted successfully")})
         await Category.insertMany(categoryData)
         console.log("Data is imported successfully into Categories")
         process.exit()
