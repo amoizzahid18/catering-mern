@@ -10,7 +10,7 @@ connectDB();
 
 const importData = async () => {
     try {
-        await Category.insertMany(productsData)
+        await Category.insertMany(categoryData)
         console.log("Data is imported successfully into Categories")
         process.exit()
     } catch (error) {
