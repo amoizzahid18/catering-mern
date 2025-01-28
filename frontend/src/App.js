@@ -27,7 +27,7 @@ const routes = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "/menu", element: <Menu /> },
-      { path: "/menu/item", element: <ViewItem /> },
+      { path: "/menu/item/:id", element: <ViewItem /> },
       { path: "/events", element: <BookEvent /> },
     ],
   },
@@ -48,7 +48,7 @@ const routes = createBrowserRouter([
             element: <OrdersPage />,
           },
           {
-            path: "/saifii's/admin/orders/order-details/id",
+            path: "/saifii's/admin/orders/order-details/:id",
             element: <OrderItemDetails />,
           },
           {
@@ -56,7 +56,7 @@ const routes = createBrowserRouter([
             element: <CategoryPage />,
           },
           {
-            path: "/saifii's/admin/category/menu/item/id",
+            path: "/saifii's/admin/category/menu/item/:id",
             element: <CatItemMenuDetails />,
           },
           {

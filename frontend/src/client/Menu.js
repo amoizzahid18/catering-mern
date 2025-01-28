@@ -6,11 +6,11 @@ import { useState, useEffect } from "react";
 function Menu() {
 
   const [categories, setCategories] = useState([]);
-
+  const [items, setItems] = useState([]);
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:5000/categories"); // Replace with your backend API URL
+        const response = await fetch("http://localhost:5000/categories"); 
         const data = await response.json();
         setCategories(data);
         console.log("Categories:", categories);
@@ -19,18 +19,31 @@ function Menu() {
         console.error("Error fetching categories:", error);
       }
     };
+    
+      const fetchItems = async () => {
+        try {
+          const response = await fetch("http://localhost:5000/items");
+          const data = await response.json();
+          setItems(data);
+          console.log("Items:", items);
+          console.log("Items:", data);
+        } catch (error) {
+          console.error("Error fetching items:", error);
+        }
+      };
+    
 
     fetchCategories();
+    fetchItems();
   }, []);
   useEffect(() => {
-    console.log("Categories state:", categories);
-  }, [categories]); // Log whenever `categories` is updated
+  }, [categories, items]); 
   
   return (
     <div className="my-20">
       <div className="flex justify-center mb-20 xsm:mb-32 items-start flex-col sm:flex-row ">
         <Categories categories = {categories}/>
-        <MenuItems />
+        <MenuItems items = {items} />
       </div>
     </div>
   );
