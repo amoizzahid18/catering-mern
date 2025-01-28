@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryItem from "./CategoryItem";
 
-function Categories() {
+function Categories({categories}) {
   return (
     <>
       <details className="dropdown sticky top-0 right-0 left-0 z-50 mx-10  sm:hidden ">
@@ -30,10 +30,10 @@ function Categories() {
               className="input border-y-stone-200 border-y-2 bg-transparent  w-40 xsm:w-auto mx-1 rounded-none"
             />
             <ul>
-              <CategoryItem />
-              <CategoryItem />
-              <CategoryItem />
-              <CategoryItem />
+              {categories?.map((category) => (
+                <CategoryItem key={category.id} name={category.name} />
+              ))}
+              
             </ul>
           </div>
         </div>

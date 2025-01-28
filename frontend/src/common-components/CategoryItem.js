@@ -1,6 +1,6 @@
 import React from "react";
 
-function CategoryItem() {
+function CategoryItem({id, name}) {
   return (
     <div>
       <div className="sm:hidden border-b-2 hover:cursor-default pb-2  rounded-none py-1 my-2 text-center ">
@@ -10,7 +10,7 @@ function CategoryItem() {
         </div>
       </div>
       <li className="hidden sm:flex  justify-between items-center pt-1 pb-2   px-5 border-b-2 my-2 text-center ">
-        <a className=" ">Rice</a>
+        <a className=" ">{name}</a>
         <input type="checkbox" className="checkbox checkbox-md" />
       </li>
     </div>
