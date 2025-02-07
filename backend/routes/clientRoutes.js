@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {getAllCategories, 
     getAllItems,
-    } = require("../controllers/controller.js");
+    } = require("../controllers/clientControllers.js");
 
 
 // get all caegories 
